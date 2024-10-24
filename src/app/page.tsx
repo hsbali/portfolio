@@ -1,113 +1,144 @@
 import Image from "next/image";
+import me from "@/assets/images/me.jpg";
+import monkProjectCover from "@/assets/images/monk-project-cover.png";
+import weshareProjectCover from "@/assets/images/weshare-project-cover.png";
+import testimonial1 from "@/assets/images/testimonial-1.png";
+import testimonial2 from "@/assets/images/testimonial-2.png";
+import { Button } from "@/components/ui/button";
+import ProjectCard from "@/components/project-card";
+
+const PROJECTS = [
+  {
+    imgSrc: monkProjectCover,
+    title: "Monk Cart Upsell & Free Gift - Monk Commerce (Shopify App)",
+    description:
+      "As a Founding member of the Development Team, contributed significantly to the creation and enhancement of a Shopify App trusted by 1000+ merchants. Led core feature development including Volume Discounts and Custom Discount Codes, enhancing sales. Proficient in SaaS development, implemented backward compatibility and Agile methodologies. Ensured smooth integration with Shopify storefronts, collaborated closely with team members, and improved user experience through custom CSS support. Prioritized scalable architecture adhering to SOLID principles and conducted POCs for innovative feature integration, ensuring competitiveness.",
+  },
+  {
+    imgSrc: weshareProjectCover,
+    title: "Marketplace for Travellers and Agents - WeShare",
+    description:
+      "As Lead Frontend Developer at WeShare, spearheaded critical feature development, including Explore/Book Activities and Itinerary Planner. Transitioned app from React.js to Next.js, boosting SEO and web vitals for increased organic traffic. Enhanced performance through data-fetching and image optimization, achieving high Lighthouse scores. Integrated OpenAI, Stripe, and Google APIs for enriched functionality and guided UI/UX enhancements, improving usability and design.",
+  },
+];
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main>
+      <section className="app-container grid grid-cols-12 gap-6 mb-36">
+        <div className="col-span-12 md:col-span-4">
+          <div className="w-1/2 mx-auto md:w-full">
+            <Image src={me} className="rounded-lg" alt="Harmeet Singh" />
+          </div>
         </div>
-      </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
+        <div className="col-span-12 md:col-span-8 md:py-4">
+          <div className="flex flex-col h-full">
+            <div className="grow text-center md:text-left mb-12">
+              <p className="mb-2">Hi, I&apos;m Harmeet 👋</p>
+              <h1 className="text-5xl font-bold leading-tight mb-4">
+                I specialize in building frontend-heavy Full Stack applications.
+              </h1>
+              <Button size="lg" asChild>
+                <a href="mailto:me@harmeetcodes.com">Let&apos;s Talk</a>
+              </Button>
+            </div>
+            <div className="flex items-start gap-2 md:gap-4">
+              <div className="text-center md:text-left pr-4">
+                <p className="text-lg font-medium">4+ years</p>
+                <small className="text-muted-foreground text-sm">
+                  Experience in Web Development
+                </small>
+              </div>
+              <div className="h-full border-r border-slate-600"></div>
+              <div className="text-center md:text-left pl-4">
+                <p className="text-lg font-medium">Key contributor</p>
+                <small className="text-muted-foreground text-sm">
+                  Contributed to successful apps.
+                </small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="app-container -mt-4 my-36">
+        <h2 className="text-7xl font-bold text-center">
+          <span className="line-through text-4xl font-semibold text-muted-foreground">
+            Writing Code
+          </span>
+          <br />
+          Building Products
+        </h2>
+      </section>
+      <section className="app-container px-4 mx-auto my-36">
+        <h2 className="text-4xl font-semibold text-center mb-12">
+          Featured Work
+        </h2>
+        <div className="grid grid-cols-12 gap-6 mb-8">
+          {PROJECTS.map((project, i) => (
+            <div key={i} className="col-span-12 md:col-span-6">
+              <ProjectCard {...project} />
+            </div>
+          ))}
+        </div>
+      </section>
+      <section className="app-container my-36">
+        <h2 className="text-4xl font-semibold text-center mb-12">
+          What peaple say about me
+        </h2>
+        <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+          <div className="flex flex-col p-6 border rounded-lg">
+            <p className="grow text-lg mb-6">
+              &quot;Harmeet was our first hire. Without his input and efforts,
+              we wouldn’t have achieved our current accomplishments.&quot;
+            </p>
+            <div className="flex items-center">
+              <Image
+                className="rounded-full w-14 h-14 mr-2"
+                src={testimonial1}
+                alt="testimonial-1"
+              />
+              <div className="mx-2">
+                <p className="font-semibold">Murtuza Merchant</p>
+                <span className="text-sm text-muted-foreground">
+                  Co-founder, Monk Commerce
+                </span>
+              </div>
+            </div>
+          </div>
+          <div className="flex flex-col p-6 border rounded-lg">
+            <p className="grow text-lg mb-6">
+              &quot;Harmeet’s performance in developing the project exceeded my
+              expectations. A true testament to his quick learning abilities and
+              effective project management skills.&quot;
+            </p>
+            <div className="flex items-center">
+              <Image
+                className="rounded-full w-14 h-14 mr-2"
+                src={testimonial2}
+                alt="testimonial-1"
+              />
+              <div className="mx-2">
+                <p className="font-semibold">Sunmeet Singh</p>
+                <span className="text-sm text-muted-foreground">
+                  Founder, Newlime Tech
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="app-container my-36">
+        <p className="text-xl mb-2">
+          Ready to make something great together? Let&apos;s chat!
+        </p>
+        <Button
+          variant="link"
+          className="text-cta font-bold p-0 h-auto"
+          asChild
         >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+          <a href="mailto:me@harmeetcodes.com">me@harmeetcodes.com</a>
+        </Button>
+      </section>
     </main>
   );
 }
