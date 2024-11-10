@@ -40,7 +40,7 @@ export default function Home() {
                 <a href="mailto:hsbaliwork@gmail.com">Let&apos;s Talk</a>
               </Button>
             </div>
-            <div className="flex items-start gap-2 md:gap-4">
+            <div className="flex items-start justify-center md:justify-start gap-2 md:gap-4">
               <div className="text-center md:text-left pr-4">
                 <p className="text-lg font-medium">4+ years</p>
                 <small className="text-muted-foreground text-sm">
