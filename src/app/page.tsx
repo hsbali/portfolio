@@ -2,8 +2,6 @@ import Image from "next/image";
 import me from "@/assets/images/me.jpg";
 import monkProjectCover from "@/assets/images/monk-project-cover.png";
 import weshareProjectCover from "@/assets/images/weshare-project-cover.png";
-import testimonial1 from "@/assets/images/testimonial-1.png";
-import testimonial2 from "@/assets/images/testimonial-2.png";
 import { Button } from "@/components/ui/button";
 import ProjectCard from "@/components/project-card";
 
@@ -35,11 +33,11 @@ export default function Home() {
           <div className="flex flex-col h-full">
             <div className="grow text-center md:text-left mb-12">
               <p className="mb-2">Hi, I&apos;m Harmeet 👋</p>
-              <h1 className="text-5xl font-bold leading-tight mb-4">
-                I specialize in building frontend-heavy Full Stack applications.
+              <h1 className="text-4xl md:text-5xl font-bold mb-4">
+                I specialize in building Frontend-heavy Full Stack applications.
               </h1>
               <Button size="lg" asChild>
-                <a href="mailto:me@harmeetcodes.com">Let&apos;s Talk</a>
+                <a href="mailto:hsbaliwork@gmail.com">Let&apos;s Talk</a>
               </Button>
             </div>
             <div className="flex items-start gap-2 md:gap-4">
@@ -61,8 +59,8 @@ export default function Home() {
         </div>
       </section>
       <section className="app-container -mt-4 my-36">
-        <h2 className="text-7xl font-bold text-center">
-          <span className="line-through text-4xl font-semibold text-muted-foreground">
+        <h2 className="text-[40px] md:text-7xl font-bold text-center">
+          <span className="inline-block line-through text-3xl md:text-4xl font-semibold text-muted-foreground">
             Writing Code
           </span>
           <br />
@@ -92,12 +90,12 @@ export default function Home() {
               we wouldn’t have achieved our current accomplishments.&quot;
             </p>
             <div className="flex items-center">
-              <Image
+              {/* <Image
                 className="rounded-full w-14 h-14 mr-2"
                 src={testimonial1}
                 alt="testimonial-1"
-              />
-              <div className="mx-2">
+              /> */}
+              <div>
                 <p className="font-semibold">Murtuza Merchant</p>
                 <span className="text-sm text-muted-foreground">
                   Co-founder, Monk Commerce
@@ -112,12 +110,12 @@ export default function Home() {
               effective project management skills.&quot;
             </p>
             <div className="flex items-center">
-              <Image
+              {/* <Image
                 className="rounded-full w-14 h-14 mr-2"
                 src={testimonial2}
                 alt="testimonial-1"
-              />
-              <div className="mx-2">
+              /> */}
+              <div>
                 <p className="font-semibold">Sunmeet Singh</p>
                 <span className="text-sm text-muted-foreground">
                   Founder, Newlime Tech
@@ -126,18 +124,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </section>
-      <section className="app-container my-36">
-        <p className="text-xl mb-2">
-          Ready to make something great together? Let&apos;s chat!
-        </p>
-        <Button
-          variant="link"
-          className="text-cta font-bold p-0 h-auto"
-          asChild
-        >
-          <a href="mailto:me@harmeetcodes.com">me@harmeetcodes.com</a>
-        </Button>
       </section>
     </main>
   );
