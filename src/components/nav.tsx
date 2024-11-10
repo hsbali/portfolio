@@ -23,10 +23,7 @@ export default function Navbar() {
     // <nav className="-ml-[11px] mb-16 mt-2">
     <header className="mb-20 mt-4">
       <div className="app-container sticky top-0">
-        <nav
-          className="flex flex-row items-center relative px-0 pb-0 fade md:overflow-auto scroll-pr-6 md:relative"
-          id="nav"
-        >
+        <nav className="flex flex-row items-center fade" id="nav">
           <div className="grow">
             <Link href="/" className="text-xl font-semibold py-1 px-2 -ml-2">
               Harmeet S.
